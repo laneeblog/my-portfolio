@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import About from './routes/About';
+import Development from './routes/Development';
+import Others from './routes/Others';
+import Careers from './routes/Careers';
+import Contact from './routes/Contact';
+import { HashRouter, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import './App.css'
+import { AnimatePresence, motion } from 'framer-motion';
 
 function App() {
+  
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);  
+    }, 2000);
+    
+  })
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    isLoading ? <div className="loading"></div> :
+    <HashRouter>
+      <Navigation></Navigation>
+      <Route path="/" exact={true} component={About}></Route>
+      <Route path="/about" component={About}></Route>
+      <Route path="/development" component={Development}></Route>
+      <Route path="/others" component={Others}></Route>
+      <Route path="/careers" component={Careers}></Route>
+      <Route path="/contact" component={Contact}></Route>
+    </HashRouter>
   );
 }
 
