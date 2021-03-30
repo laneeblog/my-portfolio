@@ -138,7 +138,7 @@ const Data =
         },
         {
             "time": 20201202,
-            "img": "/images/캡처.png",
+            "img": "/images/adfv.png",
             "title": "방탄퀴즈",
             "concept": "방탄소년단의 영어 인터뷰를 활용한 방탄 영어 퀴즈 세트",
             "skillset": "JavaScript, React Native(Expo)",
@@ -146,7 +146,7 @@ const Data =
         },
         {
             "time": 20201201,
-            "img": "/images/캡처s.png",
+            "img": "/images/aadf.png",
             "title": "밤새폭락장",
             "concept": "방탄소년단의 영어 인터뷰를 활용한 방탄 영어 퀴즈 세트",
             "skillset": "JavaScript, React Native(Expo), GCP, Firebase",

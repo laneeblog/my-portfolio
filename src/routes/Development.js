@@ -8,6 +8,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faAndroid, faAppStore } from '@fortawesome/free-brands-svg-icons';
 
+let imgRoot = ""
+if(window.location.href.indexOf("laneeblog.github.io") !== -1) {
+    imgRoot = "/my-portfolio";
+}
+
 function Development() {
 
     const devItem = data.devItem;
@@ -47,7 +52,7 @@ function Development() {
                 {
                     devItem.map((item, idx) => {
                         return <div className="devItem" key={idx}>
-                            <div className="devImg"><img src={item.img} alt={item.title}></img></div>
+                            <div className="devImg"><img src={imgRoot + item.img} alt={item.title}></img></div>
                             <div className="devDescBlock">
                                 <div className="devTitle">{item.title}</div>
                                 <div className="devConcept">{item.concept}</div>

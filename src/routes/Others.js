@@ -7,8 +7,12 @@ import data from '../Data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faStepForward, faStepBackward, faPause, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
+let imgRoot = ""
+if(window.location.href.indexOf("laneeblog.github.io") !== -1) {
+    imgRoot = "/my-portfolio";
+}
 
-var arr = [new Audio('/audio/3연음발라드.mp3'), new Audio('/audio/고향의봄.mp3'), new Audio('/audio/마리아독창.mp3'), new Audio('/audio/바운스.mp3'), new Audio('/audio/산토끼.mp3'), new Audio('/audio/알엔비발라드.mp3'), new Audio('/audio/하망연.mp3'), new Audio('/audio/spotlight.mp3')];
+var arr = [new Audio(imgRoot + '/audio/3연음발라드.mp3'), new Audio(imgRoot + '/audio/고향의봄.mp3'), new Audio(imgRoot + '/audio/마리아독창.mp3'), new Audio(imgRoot + '/audio/바운스.mp3'), new Audio(imgRoot + '/audio/산토끼.mp3'), new Audio(imgRoot + '/audio/알엔비발라드.mp3'), new Audio(imgRoot + '/audio/하망연.mp3'), new Audio(imgRoot + '/audio/spotlight.mp3')];
 var audio;
 var audioBefore;
 const audioRandomPick = () => {
@@ -82,25 +86,25 @@ function Others() {
                 </div>
                 <div className="books">
                     <div className="bookItem">
-                        <div className="bookImg"><img src="/images/math.jpg" alt="수학을 요리하다"></img></div>
+                        <div className="bookImg"><img src={imgRoot + "/images/math.jpg"} alt="수학을 요리하다"></img></div>
                         <div className="bookTitle">수학을 요리하다</div>
                         <div className="bookPublisher">처음북스</div>
                         <div className="bookTime">2016년 3월</div>
                     </div>
                     <div className="bookItem">
-                        <div className="bookImg"><img src="/images/viet.jpg" alt="맛있는 베트남"></img></div>
+                        <div className="bookImg"><img src={imgRoot + "/images/viet.jpg"} alt="맛있는 베트남"></img></div>
                         <div className="bookTitle">맛있는 베트남</div>
                         <div className="bookPublisher">처음북스</div>
                         <div className="bookTime">2015년 8월</div>
                     </div>
                     <div className="bookItem">
-                        <div className="bookImg"><img src="/images/chef.jpg" alt="위, 셰프"></img></div>
+                        <div className="bookImg"><img src={imgRoot + "/images/chef.jpg"} alt="위, 셰프"></img></div>
                         <div className="bookTitle">위, 셰프</div>
                         <div className="bookPublisher">처음북스</div>
                         <div className="bookTime">2015년 5월</div>
                     </div>
                     <div className="bookItem">
-                        <div className="bookImg"><img src="/images/mad.jpg" alt="미치광이 예술가의 부활절 살인"></img></div>
+                        <div className="bookImg"><img src={imgRoot + "/images/mad.jpg"} alt="미치광이 예술가의 부활절 살인"></img></div>
                         <div className="bookTitle">미치광이 예술가의 부활절 살인</div>
                         <div className="bookPublisher">처음북스</div>
                         <div className="bookTime">2014년 10월</div>
