@@ -5,33 +5,51 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import $ from "jquery";
 
+function navToggle() {                
+    $('.navigation').toggle('slow')
+}
+
 function Navigation(props) {
 
     useEffect(() => {
-        if(window.innerWidth < 800) {
-            $('.navigation').hide();    // 일단 감추고
-            $(".navigation").css({      // 위치 지정하고
-                "top" : $('.navigationBtn').offset().top + 55,
+        
+        if(window.innerWidth < 950) {
+            $('.navigation').hide();  
+            $(".navigation").css({  
+                "top" : "75px",
                 "right" : "25px"
              });
-            // 클릭 이벤트
-            document.querySelector('.navBar').addEventListener('click', function(){                
-                $('.navigation').toggle('slow');
-            })            
+            document.querySelector('.navBar').addEventListener('click', navToggle)            
         }
 
+        $(window).resize(function() { 
+            document.querySelector('.navBar').removeEventListener("click", navToggle);
+            if(window.innerWidth < 950) {
+                $('.navigation').hide();    // 일단 감추고
+                $(".navigation").css({      // 위치 지정하고
+                    "top" : "75px",
+                    "right" : "25px"
+                 });
+                document.querySelector('.navBar').addEventListener('click', navToggle)            
+            }else {
+                $('.navigation').show();  
+                $(".navigation").css({     
+                    "top" : "30%",
+                    "right" : "25px"
+                 });
+            }      
+        });
 
     })
-
-
-
+    
     return <div className="navBar">
         <div className="navigationBtn"><FontAwesomeIcon icon={faBars} /></div>
         <div className="navigation">
-            <Link to="/about" className="link">About</Link>
+            <Link to="/" className="link">Home</Link>
+            <Link to="/timeline" className="link">Timeline</Link>
             <Link to="/development" className="link">Development</Link>
             <Link to="/others" className="link">Others</Link>
-            <Link to="/careers" className="link">Careers</Link>
+            <Link to="/about" className="link">About</Link>
             <Link to="/contact" className="link">Contact</Link>
         </div>
     </div>
