@@ -46,4 +46,4 @@ export default App;
 
 
 
-// git init > 사이트에서 new repository 생성 > git remote add oritin "https://~~" > git add . > git commit -m "3. first finish" > git push origin master
+// git init > 사이트에서 new repository 생성 > git remote add oritin "https://~~" > git add . > git commit -m "4. first finish for netlify" > git push origin master
