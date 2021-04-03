@@ -11,10 +11,9 @@ ReactJS를 이용하여 [포트폴리오](https://laneeblog.github.io/my-portfol
 
 `npm i framer-motion`
 
-페이지 전환 효과를 위해 framer-motion 라이브러리를 사용했다.\
-대략적인 사용법은 Route 태그를 AnimatePresence 태그로 감싸주고 페이지 전환이 필요한 컴포넌트 태그에 아래와 같이 prefix(?)를 붙여 사용한다.\
+페이지 전환 효과를 위해 framer-motion 라이브러리를 사용했다.
+대략적인 사용법은 Route 태그를 AnimatePresence 태그로 감싸주고 페이지 전환이 필요한 컴포넌트 태그에 `<motion.div></motion.div>`와 같이 motion 태그를 붙여 사용한다.\
 
-`<div></div>` > `<motion.div></motion.div>`
 
 애니메이션 효과는 in, initial, out으로 나누어 페이지 전환이 필요한 컴포넌트에 속성으로 부여하면 된다.
 
@@ -44,7 +43,7 @@ Java에서 이메일 보내기 기능을 구현할 때랑은 비교도 안 되�
 
 ### Timeline
 
-신참 개발자치곤 비교적 긴 캐리어 패스를 효과적으로 보여주기 위해 각 이력을 불러올 때 시간차를 둬 내가 의도한 대로 이력을 볼 수 있게 하고 싶었다.
+비교적 긴 캐리어 패스를 효과적으로 보여주기 위해 각 이력을 불러올 때 시간차를 둬 내가 의도한 대로 이력을 볼 수 있게 하고 싶었다.
 
 ### Development
 
