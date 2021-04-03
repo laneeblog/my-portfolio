@@ -1,7 +1,6 @@
 # WELCOME TO LANEEBLOG
 
 ReactJS를 이용하여 [포트폴리오](https://laneeblog.github.io/my-portfolio/) 사이트를 만들어 보며 모던 웹 페러다임이란 무엇인지 경험해보고자 했다.\
-이번 포트폴리오 사이트를 시작으로 Gibhub도 본격적으로 활용해보려 한다.
 
 
 ## 사용한 라이브러리
@@ -11,8 +10,8 @@ ReactJS를 이용하여 [포트폴리오](https://laneeblog.github.io/my-portfol
 
 `npm i framer-motion`
 
-페이지 전환 효과를 위해 framer-motion 라이브러리를 사용했다.
-대략적인 사용법은 Route 태그를 AnimatePresence 태그로 감싸주고 페이지 전환이 필요한 컴포넌트 태그에 `<motion.div></motion.div>`와 같이 motion 태그를 붙여 사용한다.\
+페이지 전환 효과를 위해 framer-motion 라이브러리를 사용했다.\
+대략적인 사용법은 Route 태그를 AnimatePresence 태그로 감싸주고 페이지 전환이 필요한 컴포넌트 태그에 `<motion.div></motion.div>`와 같이 motion 태그를 붙여 사용한다.
 
 
 애니메이션 효과는 in, initial, out으로 나누어 페이지 전환이 필요한 컴포넌트에 속성으로 부여하면 된다.
