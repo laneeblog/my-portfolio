@@ -1,6 +1,6 @@
 # WELCOME TO LANEEBLOG
 
-ReactJS를 이용하여 [포트폴리오](https://laneeblog.github.io/my-portfolio/) 사이트를 만들어 보며 모던 웹 페러다임이란 무엇인지 경험해보고자 했다.\
+ReactJS를 이용하여 [포트폴리오](https://laneeblog.github.io/my-portfolio/) 사이트를 만들어 보며 모던 웹 페러다임이란 무엇인지 경험해보고자 했다.
 
 
 ## 사용한 라이브러리
