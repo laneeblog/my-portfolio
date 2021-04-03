@@ -20,7 +20,7 @@ const Data =
         {
             "time": 20210315,
             "title": "<동네가게> 공개",
-            "desc": "지역을 기반으로 자영업자 및 개인의 유무형 자원을 교환할 수 있는 플랫폼인 동네가게를 출시했어요.",
+            "desc": "지역을 기반으로 자영업자 및 개인의 유무형 자원을 교환할 수 있는 플랫폼인 동네가게를 출시했어요. 기회가 닿는 대로 ReactJS로 포팅하면서 디자인도 개선해나갈 계획이에요.",
             "link1": "https://dongnegage.com/",
             "link2": "https://play.google.com/store/apps/details?id=com.eggsun.dongnegage"
         },
@@ -111,11 +111,6 @@ const Data =
             "time": 20110302,
             "title": "음악 컨텐츠 제작 @ KEVIC",
             "desc": "방송음향설비 기업인 KEVIC에서 글로벌 MR 시장을 타켓으로 하는 신규 사업을 추진했어요. IT 팀과 협업을 하며 수많은 곡의 MR을 제작하고 현지화하는 데 많은 힘을 쏟았었죠."
-        },
-        {
-            "time": 20080301,
-            "title": "음악 컨텐츠 제작 @ NSR Media",
-            "desc": "멋모르고 시작한 사회생활, 이때 만났던 사람들, 그들과 함께 쌓은 추억은, 오래된 시간 만큼이나 잊히지 않아요."
         },
     ],
     "devItem": [

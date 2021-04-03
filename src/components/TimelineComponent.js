@@ -8,12 +8,14 @@ function TimelineComponent({ time, title, desc, link1, link2, link3 }) {
 
     useEffect(() => {
         $(".timelineItem").hide()
+        let timeouts = [];
         setTimeout(() => {
             $('.timeline').css('border-left', '5px solid #97e298');
             for (let idx = 0; idx < $(".timelineItem").length; idx++) {
-                setTimeout(() => {
+                let timeout = setTimeout(() => {
                     $(".timelineItem").eq(idx).show(1500)
                 }, 2000 * idx);            
+                timeouts.push(timeout)
             }    
         }, 3000);        
 
@@ -28,7 +30,13 @@ function TimelineComponent({ time, title, desc, link1, link2, link3 }) {
             $(this).children(":eq(1)").css('color', '#43a047');
             $(this).children(":eq(1)").children(":eq(0)").children(":eq(0)").css('background-color', '#43a047');
         });
-    })
+
+        return () => {
+            for(let idx2 = 0; idx2 < timeouts.length; idx2++) {
+                clearTimeout(timeouts[idx2]);
+            }
+        }
+    }, [])
 
     return <div className="timelineItem">
         <div className="timelineDot"><FontAwesomeIcon icon={faSquare} /></div>
