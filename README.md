@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# WELCOME TO LANEEBLOG
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ReactJS를 이용하여 [포트폴리오](https://laneeblog.github.io/my-portfolio/) 사이트를 만들어 보며 모던 웹 페러다임이란 무엇인지 경험해보고자 했다.
+이번 포트폴리오 사이트를 시작으로 Gibhub 활용도 본격적으로 해보려 한다.
 
-## Available Scripts
 
-In the project directory, you can run:
+## 사용한 라이브러리
 
-### `npm start`
+### framer-motion
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`npm i framer-motion`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+페이지 전환 효과를 위해 framer-motion 라이브러리를 사용했다.
+대략적인 사용법은 Route 태그를 AnimatePresence 태그로 감싸주고 페이지 전환이 필요한 컴포넌트 태그에 아래와 같이 prefix(?)를 붙여 사용한다.
 
-### `npm test`
+`<div></div>` > `<motion.div></motion.div>`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+애니메이션 효과는 in, initial, out으로 나누어 페이지 전환이 필요한 컴포넌트에 속성으로 부여하면 된다.
 
-### `npm run build`
+자세한 내용은 [여기!](https://www.npmjs.com/package/framer-motion)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### emailjs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm i emailjs`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Contact 페이지에서 이메일 보내기 기능을 위해 emailjs 라이브러리를 활용했다.
+Java에서 이메일 보내기 기능을 구현할 때랑은 비교도 안 되게 간편해 놀라울 정도였다.
 
-### `npm run eject`
+자세한 내용은 [여기!](https://www.npmjs.com/package/emailjs)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### jquery
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`npm i jquery`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+돔 조작을 위해 익숙한 jquery를 사용했다.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+자세한 내용은 [여기!](https://www.npmjs.com/package/jquery)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 컨텐츠 구성
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Timeline
 
-### Code Splitting
+신참 개발자치곤 비교적 긴 캐리어 패스를 효과적으로 보여주기 위해 각 이력을 불러올 때 시간차를 둬 내가 의도한 대로 이력을 볼 수 있게 하고 싶었다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Development
 
-### Analyzing the Bundle Size
+개인적으로 소소한 프로젝트를 틈틈히 진행 중이다. 앞으로도 꾸준히 업데이트할 계획이다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Others
 
-### Making a Progressive Web App
+#### 나 이런 것도 잘해요
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### About Me
 
-### Advanced Configuration
+😊
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Contact
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+😉

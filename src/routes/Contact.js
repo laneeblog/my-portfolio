@@ -10,14 +10,16 @@ import { faMapMarkerAlt, faEnvelopeOpen, faHeart } from '@fortawesome/free-solid
 
 function sendEmail(e) {
     e.preventDefault();
+    if($('input[name=from_name]').val() === "" || $('input[name=from_email]').val() === "" || $('input[name=message]').val() === "") {
+        alert("양식을 모두 입력해 주세요 😄")
+        return;
+    }
     emailjs.sendForm('service_qyfxwh8', 'template_rv4lyz4', e.target, 'user_qMpQ8EuPVJQHaiCyP0xT7')
-        .then((result) => {
-            console.log(result.text);
-            // 여기 수정
-        }, (error) => {
-            console.log(error.text);
-            // 여기 수정!!!!!!!!!!!
-
+        .then(() => {  
+            $('#form')[0].reset();
+            alert("전송 완료! 😄");
+        }, () => {
+            alert("전송에 실패했어요. CONTACT 버튼을 이용해 보시겠어요?");
         });
 }
 
@@ -29,8 +31,6 @@ function Contact() {
         $('a:contains("Contact")').css('color', '#43a047');
         $('a:contains("Contact")').css('background-color', '#fbfffc');
     })
-
-
 
     return <section>
         <FirstFrame></FirstFrame>
@@ -62,7 +62,7 @@ function Contact() {
                         </div>
                     </div>
                     <div className="contactForm">
-                        <form onSubmit={sendEmail}>
+                        <form onSubmit={sendEmail} id="form">
                             <label>Name</label><br />
                             <input type="text" name="from_name" /><br />
                             <label>Email</label><br />

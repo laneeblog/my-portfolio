@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faStepForward, faStepBackward, faPause, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 let imgRoot = ""
-if(window.location.href.indexOf("laneeblog.github.io") !== -1) {
+if (window.location.href.indexOf("laneeblog.github.io") !== -1) {
     imgRoot = "/my-portfolio";
 }
 
@@ -48,14 +48,21 @@ function Others() {
             setPlayPause(false);
         }
     }
-
+    audio.addEventListener("ended", function () {
+        setPlayPause(true);
+    });
 
     useEffect(() => {
         $('a').css('color', '#fbfffc');
         $('a').css('background-color', '#43a047');
         $('a:contains("Others")').css('color', '#43a047');
         $('a:contains("Others")').css('background-color', '#fbfffc');
-    })
+
+        if (!audio.paused) { 
+            setPlayPause(false);
+        }
+
+    }, [playPause])
 
 
     return <section>
@@ -70,7 +77,7 @@ function Others() {
         >
             <div className="itemContainer">
                 <div className="othersIntroduction">
-                    <div className="othersTitle">Books</div>                    
+                    <div className="othersTitle">Books</div>
                     <br /><br />
                     <div className="othersDesc">
                         <div className="quotBook">

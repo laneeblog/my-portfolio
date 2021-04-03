@@ -27,7 +27,7 @@ const Data =
         {
             "time": 20210301,
             "title": "동네가게 오픈",
-            "desc": "소소하게 만드는 서비스들을 공개하기 위해 작은 '동네가게'를 오픈했어요."
+            "desc": "소소하게 만드는 서비스들을 공개하기 위해 지인과 함께 작은 '동네가게'를 오픈했어요."
         },      
         {
             "time": 20210115,
@@ -148,8 +148,8 @@ const Data =
             "time": 20201201,
             "img": "/images/aadf.png",
             "title": "밤새폭락장",
-            "concept": "방탄소년단의 영어 인터뷰를 활용한 방탄 영어 퀴즈 세트",
-            "skillset": "JavaScript, React Native(Expo), GCP, Firebase",
+            "concept": "미국장의 3가지 주요 지수 변동을 매일 아침 알려주는 어플",
+            "skillset": "JavaScript, Python, React Native(Expo), GCP, Firebase",
             "link2": "https://play.google.com/store/apps/details?id=com.laneeblog.usamarketdata"
         },
     ]

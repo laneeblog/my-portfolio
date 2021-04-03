@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import FirstFrame from '../components/FirstFrame';
 import TimelineComponent from '../components/TimelineComponent';
 import '../App.css';
@@ -6,19 +6,18 @@ import data from '../Data';
 import $ from "jquery";
 import { motion } from 'framer-motion';
 
-function Timeline() {
-    const timeline = data.timeline;
-    const [isLoading, setIsLoading] = useState(true);
 
-    const getTimeline = async () => {
-        timeline.sort(function (a, b) {
-            return b.time - a.time;
-        });
-        setIsLoading(false);
-    }
+const timeline = data.timeline;
+const getTimeline = () => {
+    timeline.sort(function (a, b) {
+        return b.time - a.time;
+    });
+}
+getTimeline();
+
+function Timeline() {
 
     useEffect(() => {
-        getTimeline();
         $('a').css('color', '#fbfffc');
         $('a').css('background-color', '#43a047');
         $('a:contains("Timeline")').css('color', '#43a047');
@@ -29,7 +28,7 @@ function Timeline() {
         }, 1000);
     })
 
-    return isLoading ? null : <section>
+    return <section>
         <FirstFrame></FirstFrame>
         <motion.div
             initial="initial"

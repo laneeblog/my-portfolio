@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../App.css';
 import FirstFrame from '../components/FirstFrame';
 import $ from "jquery";
@@ -9,35 +9,28 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faAndroid, faAppStore } from '@fortawesome/free-brands-svg-icons';
 
 let imgRoot = ""
-if(window.location.href.indexOf("laneeblog.github.io") !== -1) {
+if (window.location.href.indexOf("laneeblog.github.io") !== -1) {
     imgRoot = "/my-portfolio";
 }
 
+const devItem = data.devItem;
+const getDevItem = () => {
+    devItem.sort(function (a, b) {
+        return b.time - a.time;
+    });
+}
+getDevItem();
+
 function Development() {
 
-    const devItem = data.devItem;
-    const [isLoading, setIsLoading] = useState(true);
-
-    const getDevItem = async () => {
-        devItem.sort(function (a, b) {
-            return b.time - a.time;
-        });
-        setIsLoading(false);
-    }
-
-
-
-
     useEffect(() => {
-        getDevItem();
-
         $('a').css('color', '#fbfffc');
         $('a').css('background-color', '#43a047');
         $('a:contains("Development")').css('color', '#43a047');
         $('a:contains("Development")').css('background-color', '#fbfffc');
     })
 
-    return isLoading ? null : <section>
+    return <section>
         <FirstFrame></FirstFrame>
         <motion.div
             initial="initial"
